@@ -69,13 +69,13 @@
   /* ── demo de conversación ────────────────────────────── */
   const chat = $('#chat');
   const script = [
-    { who: 'them', text: 'Hola, vi el modelo X en vuestra web. ¿Lo tenéis en azul, talla 42?' },
-    { who: 'me',   text: 'Hola Marta 👋 Sí: quedan 3 unidades en azul, talla 42. Te las reservo 30 min.' },
-    { who: 'them', text: '¿Cuánto tardaría en llegar a Valencia?' },
-    { who: 'me',   text: '24-48 h laborables. Si lo confirmas antes de las 17:00, sale hoy mismo.' },
-    { who: 'them', text: 'Vale, me lo llevo.' },
-    { who: 'me',   text: 'Perfecto. Aquí tienes tu link de pago seguro 🔗 — y te añado el kit de cuidado con un 15% por ser compra combinada.' },
-    { who: 'them', text: '¡Añádelo! 🙌' }
+    { who: 'them', text: 'Hola, vi el modelo X en su web. ¿Lo tienen en azul, talla 42?' },
+    { who: 'me',   text: 'Hola Marta 👋 Sí: quedan 3 unidades en azul, talla 42. Te las reservo por 30 min.' },
+    { who: 'them', text: '¿Cuánto se demora en llegar a Providencia?' },
+    { who: 'me',   text: '24-48 h hábiles. Si lo confirmas antes de las 17:00, despachamos hoy mismo.' },
+    { who: 'them', text: 'Ya, me lo llevo.' },
+    { who: 'me',   text: 'Perfecto. Aquí tienes tu link de pago seguro 🔗 — y te agrego el kit de cuidado con 15% de descuento por compra combinada.' },
+    { who: 'them', text: '¡Agrégalo! 🙌' }
   ];
 
   const bubble = (who, text) => {
