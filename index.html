@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centriconic · Agentes de IA que venden por WhatsApp</title>
+<meta name="description" content="Consultora de IA agéntica. Diseñamos agentes comerciales para pymes que contactan clientes, consultan stock y cierran ventas por WhatsApp. Escalable, customizable y a comisión.">
+<meta name="theme-color" content="#05060A">
+<meta property="og:title" content="Centriconic · Agentes de IA que venden por WhatsApp">
+<meta property="og:description" content="Agentes comerciales de IA para pymes. Contactan, informan, recuperan clientes y cierran ventas.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='34' fill='none' stroke='%2300E5C4' stroke-width='8'/><circle cx='50' cy='50' r='10' fill='%236D5EFC'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<canvas id="mesh" aria-hidden="true"></canvas>
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ───────────────────────── NAV ───────────────────────── -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top">
+    <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="6" opacity=".35"/>
+      <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="6"
+              stroke-dasharray="60 400" stroke-linecap="round" class="brand-arc"/>
+      <circle cx="50" cy="50" r="11" fill="currentColor"/>
+    </svg>
+    <span class="brand-name">Centriconic</span>
+  </a>
+  <nav class="nav-links" aria-label="Principal">
+    <a href="#servicios">Servicios</a>
+    <a href="#agente">Agente de ventas</a>
+    <a href="#recuperacion">Recuperación</a>
+    <a href="#escala">Escala</a>
+    <a href="#planes">Planes</a>
+  </nav>
+  <a class="btn btn-primary btn-sm" href="#contacto">Pedir demo</a>
+  <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><i class="dot"></i> Consultora de IA agéntica</span>
+      <h1>
+        Tu equipo comercial,<br>
+        <span class="grad">operando 24/7<br>dentro de WhatsApp.</span>
+      </h1>
+      <p class="lead">
+        Construimos agentes de IA que hablan con tus clientes como lo haría tu mejor
+        vendedor: contactan, resuelven dudas, consultan stock en tiempo real y cierran
+        la venta. Sin turnos, sin colas, sin leads olvidados.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contacto">Quiero mi agente</a>
+        <a class="btn btn-ghost" href="#agente">Ver cómo vende →</a>
+      </div>
+      <ul class="hero-stats">
+        <li><strong data-count="24">0</strong><span>/7 sin descanso</span></li>
+        <li><strong data-count="90" data-suffix="%">0</strong><span>de consultas resueltas solas</span></li>
+        <li><strong data-count="3" data-suffix=" seg">0</strong><span>de tiempo de respuesta</span></li>
+      </ul>
+    </div>
+
+    <!-- Chat mock -->
+    <div class="hero-visual reveal" data-delay="120">
+      <div class="phone">
+        <div class="phone-top">
+          <span class="avatar">C</span>
+          <div>
+            <b>Centriconic · Ventas</b>
+            <small><i class="pulse"></i> en línea</small>
+          </div>
+        </div>
+        <div class="phone-body" id="chat"></div>
+        <div class="phone-input"><span>Escribe un mensaje…</span></div>
+      </div>
+      <div class="halo" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── SERVICIOS ───────────────────────── -->
+<section id="servicios" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">01 — Capacidades</span>
+      <h2>Tres cosas que tu negocio deja de hacer a mano</h2>
+      <p class="sub">Cada capacidad es un módulo. Se activan por separado o funcionan como un solo agente.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Contactar clientes</h3>
+        <p>Campañas salientes segmentadas por comportamiento: quien no compró, quien compró hace 90 días,
+           quien abandonó el carrito. Mensaje personalizado, uno a uno, a escala.</p>
+        <ul class="ticks">
+          <li>Segmentación automática desde tu CRM</li>
+          <li>Plantillas aprobadas por Meta</li>
+          <li>Escalado a humano cuando hay intención de compra</li>
+        </ul>
+      </article>
+
+      <article class="card reveal" data-delay="80">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 7 12 3 4 7v10l8 4 8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
+        </div>
+        <h3>Ver disponibilidad de stock</h3>
+        <p>El agente consulta tu inventario real en el momento. Nada de «déjame confirmar y te aviso».
+           Responde talla, color, precio, plazo y alternativa si no hay.</p>
+        <ul class="ticks">
+          <li>Conexión a ERP, Shopify, Odoo, Excel o API propia</li>
+          <li>Reserva de unidades durante la conversación</li>
+          <li>Sugerencia de producto sustituto si hay rotura</li>
+        </ul>
+      </article>
+
+      <article class="card reveal" data-delay="160">
+        <div class="card-ico">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+        </div>
+        <h3>Dar información del negocio</h3>
+        <p>Horarios, ubicación, políticas de devolución, garantías, formas de pago, estado del pedido.
+           Entrenado con tus documentos, no con suposiciones.</p>
+        <ul class="ticks">
+          <li>Base de conocimiento propia y versionada</li>
+          <li>Respuestas con fuente, sin inventar</li>
+          <li>Actualizable sin tocar código</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── AGENTE DE VENTAS ───────────────────────── -->
+<section id="agente" class="section section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">02 — Producto estrella</span>
+      <h2>¿Qué hace exactamente un agente<br>para venderte <span class="grad">más</span>?</h2>
+      <p class="sub">No es un chatbot con botones. Es un vendedor con método, memoria y objetivo.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-n">01</span>
+        <h3>Responde antes de que se enfríe</h3>
+        <p>El 78% de los leads compran a quien contesta primero. El agente responde en segundos,
+           a cualquier hora, en cualquier idioma.</p>
+      </div>
+      <div class="step reveal" data-delay="60">
+        <span class="step-n">02</span>
+        <h3>Califica y detecta intención</h3>
+        <p>Distingue al curioso del comprador. Pregunta presupuesto, urgencia y uso, y puntúa
+           el lead antes de pasarlo a tu equipo.</p>
+      </div>
+      <div class="step reveal" data-delay="120">
+        <span class="step-n">03</span>
+        <h3>Recomienda y hace upsell</h3>
+        <p>Cruza histórico de compra con stock disponible y propone el producto correcto,
+           el pack superior o el complemento natural.</p>
+      </div>
+      <div class="step reveal" data-delay="180">
+        <span class="step-n">04</span>
+        <h3>Rompe objeciones</h3>
+        <p>Precio, plazo, garantía, comparativa con la competencia: respuestas entrenadas con
+           tus argumentos de venta reales.</p>
+      </div>
+      <div class="step reveal" data-delay="240">
+        <span class="step-n">05</span>
+        <h3>Cierra dentro del chat</h3>
+        <p>Envía link de pago, agenda la cita o confirma el pedido sin sacar al cliente
+           de la conversación.</p>
+      </div>
+      <div class="step reveal" data-delay="300">
+        <span class="step-n">06</span>
+        <h3>Persigue el seguimiento</h3>
+        <p>Recordatorios a las 24h, 72h y 7 días. Educado, con contexto y con una razón nueva
+           para volver.</p>
+      </div>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-node"><b>Cliente</b><small>WhatsApp</small></div>
+      <div class="flow-line"></div>
+      <div class="flow-node accent"><b>Agente Centriconic</b><small>razonamiento + memoria</small></div>
+      <div class="flow-line"></div>
+      <div class="flow-node"><b>Tus sistemas</b><small>stock · CRM · pagos</small></div>
+      <div class="flow-line"></div>
+      <div class="flow-node"><b>Venta</b><small>o handoff humano</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── RECUPERACIÓN / COMISIÓN ───────────────────────── -->
+<section id="recuperacion" class="section">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <span class="kicker">03 — Modelo a riesgo compartido</span>
+      <h2>Reactivamos a quien<br>no te compró. Cobramos<br><span class="grad">solo si vende.</span></h2>
+      <p class="sub">
+        Toda pyme tiene una lista muerta: presupuestos sin cerrar, carritos abandonados,
+        clientes de hace un año. El agente los recupera uno a uno con una oferta pensada
+        para su caso.
+      </p>
+      <p class="sub">
+        Nosotros ponemos la tecnología y la operación. Tú pagas un fee reducido y un
+        <strong>porcentaje sobre la venta recuperada</strong>. Si no recuperamos nada,
+        no hay comisión.
+      </p>
+      <a class="btn btn-primary" href="#contacto">Auditar mi base de clientes</a>
+    </div>
+
+    <div class="reveal" data-delay="120">
+      <ol class="timeline">
+        <li>
+          <span class="t-dot"></span>
+          <h4>Importamos tu base</h4>
+          <p>CSV, CRM o ERP. Limpiamos duplicados y detectamos quién es recuperable.</p>
+        </li>
+        <li>
+          <span class="t-dot"></span>
+          <h4>Segmentamos por motivo de pérdida</h4>
+          <p>Precio, plazo, falta de stock, silencio. Cada motivo lleva un guion distinto.</p>
+        </li>
+        <li>
+          <span class="t-dot"></span>
+          <h4>El agente contacta con una oferta</h4>
+          <p>Mensaje personalizado, incentivo calculado y disponibilidad confirmada en el momento.</p>
+        </li>
+        <li>
+          <span class="t-dot"></span>
+          <h4>Atribución transparente</h4>
+          <p>Cada venta lleva su conversación asociada. Panel abierto: ves lo mismo que nosotros.</p>
+        </li>
+        <li class="hl">
+          <span class="t-dot"></span>
+          <h4>Facturamos la comisión</h4>
+          <p>Un % sobre lo recuperado. Sin venta, sin factura.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── ESCALA / CUSTOM ───────────────────────── -->
+<section id="escala" class="section section-alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">04 — Arquitectura</span>
+      <h2>Un motor. Mil negocios distintos.</h2>
+      <p class="sub">
+        El núcleo del agente es siempre el mismo; lo que cambia es la capa de configuración.
+        Por eso desplegamos una pyme nueva en días, no en meses.
+      </p>
+    </div>
+
+    <div class="layers">
+      <div class="layer reveal">
+        <span class="layer-tag">Capa 1</span>
+        <h3>Núcleo agéntico</h3>
+        <p>Razonamiento, memoria conversacional, herramientas y seguridad. Compartido, probado y mejorado con cada cliente.</p>
+      </div>
+      <div class="layer reveal" data-delay="80">
+        <span class="layer-tag">Capa 2</span>
+        <h3>Vertical</h3>
+        <p>Paquetes por sector: retail, talleres, clínicas, inmobiliarias, distribución. Guiones y métricas ya calibrados.</p>
+      </div>
+      <div class="layer reveal" data-delay="160">
+        <span class="layer-tag">Capa 3</span>
+        <h3>Tu negocio</h3>
+        <p>Catálogo, tono de voz, políticas, integraciones y reglas de escalado. Todo editable desde el panel.</p>
+      </div>
+    </div>
+
+    <div class="chips reveal">
+      <span>Multi-tenant</span><span>Onboarding en 7 días</span><span>Sin código para tu equipo</span>
+      <span>API abierta</span><span>Histórico auditable</span><span>Handoff humano</span>
+      <span>Multilenguaje</span><span>Cumplimiento RGPD</span><span>Meta Business verificado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── PLANES ───────────────────────── -->
+<section id="planes" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">05 — Planes</span>
+      <h2>Empieza pequeño. Escala cuando funcione.</h2>
+      <p class="sub">Sin permanencia. El plan sube contigo, no al revés.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <h3>Arranque</h3>
+        <p class="plan-for">Pymes que quieren dejar de perder mensajes.</p>
+        <div class="price"><span>desde</span><b>490€</b><span>/mes</span></div>
+        <ul class="ticks">
+          <li>Agente de atención en WhatsApp</li>
+          <li>Info del negocio + FAQs</li>
+          <li>Consulta de stock (1 fuente)</li>
+          <li>Panel de conversaciones</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contacto">Empezar</a>
+      </article>
+
+      <article class="plan featured reveal" data-delay="80">
+        <span class="badge">Más contratado</span>
+        <h3>Comercial</h3>
+        <p class="plan-for">Pymes que quieren vender más con el mismo equipo.</p>
+        <div class="price"><span>desde</span><b>990€</b><span>/mes</span></div>
+        <ul class="ticks">
+          <li>Todo lo de Arranque</li>
+          <li>Agente de ventas con cierre en chat</li>
+          <li>Campañas salientes y seguimiento</li>
+          <li>Integración CRM + pasarela de pago</li>
+          <li>Informe mensual de rendimiento</li>
+        </ul>
+        <a class="btn btn-primary" href="#contacto">Pedir demo</a>
+      </article>
+
+      <article class="plan reveal" data-delay="160">
+        <h3>Performance</h3>
+        <p class="plan-for">Bases de clientes grandes y dormidas.</p>
+        <div class="price"><span>fee bajo +</span><b>%</b><span>por venta</span></div>
+        <ul class="ticks">
+          <li>Recuperación de clientes perdidos</li>
+          <li>Comisión sobre venta atribuida</li>
+          <li>Atribución auditable end-to-end</li>
+          <li>Optimización continua de guiones</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contacto">Hablar del modelo</a>
+      </article>
+    </div>
+    <p class="fineprint reveal">Precios orientativos. El alcance final depende de integraciones y volumen de conversaciones.</p>
+  </div>
+</section>
+
+<!-- ───────────────────────── CONTACTO ───────────────────────── -->
+<section id="contacto" class="section section-cta">
+  <div class="wrap cta-box reveal">
+    <span class="kicker">06 — Siguiente paso</span>
+    <h2>30 minutos. Te decimos si<br>la IA te encaja o no.</h2>
+    <p class="sub">Sin presentación comercial. Miramos tu operación y salimos con un número: cuánto puedes recuperar.</p>
+
+    <form class="form" id="form" novalidate>
+      <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre"></div>
+      <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" required autocomplete="organization" placeholder="Nombre del negocio"></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="tu@empresa.com"></div>
+      <div class="field"><label for="tel">WhatsApp</label><input id="tel" name="tel" type="tel" autocomplete="tel" placeholder="+34 600 000 000"></div>
+      <div class="field full"><label for="reto">¿Qué quieres resolver?</label><textarea id="reto" name="reto" rows="3" placeholder="Ej: tenemos 4.000 presupuestos sin cerrar del último año."></textarea></div>
+      <div class="full form-actions">
+        <button class="btn btn-primary" type="submit">Solicitar diagnóstico</button>
+        <span class="form-msg" id="formMsg" role="status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="6" opacity=".35"/>
+          <circle cx="50" cy="50" r="11" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">Centriconic</span>
+      </a>
+      <p class="footer-tag">Consultora de IA agéntica.<br>Agentes que trabajan, no demos que impresionan.</p>
+    </div>
+    <div>
+      <h5>Servicios</h5>
+      <a href="#servicios">Atención automatizada</a>
+      <a href="#agente">Agente de ventas</a>
+      <a href="#recuperacion">Recuperación a comisión</a>
+      <a href="#escala">Integraciones</a>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <a href="mailto:hola@centriconic.com">hola@centriconic.com</a>
+      <a href="#contacto">Pedir diagnóstico</a>
+    </div>
+  </div>
+  <div class="wrap footer-bot">
+    <small>© <span id="year">2026</span> Centriconic. Todos los derechos reservados.</small>
+    <small>Hecho con agentes.</small>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
