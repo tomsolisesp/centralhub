@@ -1,5 +1,5 @@
 /* ============================================================
-   Centriconic · interacciones
+   CentralHub · interacciones
    Vanilla JS, sin dependencias. Todo degrada con gracia.
    ============================================================ */
 (() => {

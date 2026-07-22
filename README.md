@@ -1,10 +1,10 @@
-# Centriconic
+# CentralHub
 
-Sitio web de **Centriconic** — consultora de IA agéntica con base en Santiago de Chile.
+Sitio web de **CentralHub** — consultora de IA agéntica con base en Santiago de Chile.
 Diseñamos agentes comerciales que operan dentro de WhatsApp para pymes: contactan clientes, consultan stock, informan
 del negocio, cierran ventas y recuperan clientes perdidos.
 
-🔗 **https://onfuego.github.io/centriconic/**
+🔗 **https://onfuego.github.io/centralhub/**
 
 ## Stack
 
